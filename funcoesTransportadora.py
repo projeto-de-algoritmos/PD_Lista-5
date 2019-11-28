@@ -26,30 +26,6 @@ def recebeOpcao(mensagem, min, max):
         opcao = int(input(mensagem))
     return opcao
 
-# def cadastra_produtos(produtos):
-#     saida = 1
-#     while(saida != 0):
-#         os.system("clear")
-#         print("================== CADASTRO DE PRODUTOS ====================")
-#         produto = str(input("Nome do produto: "))
-#         produtos[produto] = {}
-        
-#         quantidade = int(input("Quantidade: "))
-#         quantidade = valida_atributos_dos_produtos(quantidade, "Quantidade: ")
-#         produtos[produto]['quantidade'] = quantidade
-        
-#         valor = int(input("Valor(R$): "))
-#         valor = valida_atributos_dos_produtos(valor, "Valor(R$): ")
-#         produtos[produto]['valor'] = valor
-
-#         peso = int(input("Peso(g): "))
-#         peso = valida_atributos_dos_produtos(peso, "Peso(g): ")
-#         produtos[produto]['peso'] = peso
-
-#         print("Produto cadastrado com sucesso!")
-#         saida = int(input("Deseja cadastrar mais produtos? Pressione 1 para continuar e 0 para sair -> "))
-#     return produtos
-
 def cadastra_produtos(produtos):
     saida = 1
     while(saida != 0):
@@ -76,23 +52,6 @@ def valida_atributos_dos_produtos(elemento, mensagem):
         print("Digite um valor maior que 0 e inteiro!")
         elemento = int(input(mensagem))
     return elemento
-
-# def exibir_produtos_cadastrados(produtos):
-#     i = 1
-#     if produtos:
-#         print("======================= PRODUTOS CADASTRADOS ======================")
-#         for produto in produtos:
-#             print("\nProduto ", i)
-#             print("Nome do produto: ", produtos[produto])
-#             print("Quantidade: ", produtos[produto]["quantidade"])
-#             print("Valor(R$): ", produtos[produto]["valor"])
-#             print("Peso(g): ", produtos[produto]["peso"])
-#             print("--------------------------------------------------")
-#             i += 1 
-#     else:
-#         print("--------------------------")
-#         print("Nenhum produto cadastrado!")
-#         print("--------------------------")
 
 def exibir_produtos_cadastrados(produtos):
     if produtos:
@@ -135,7 +94,7 @@ def executa_knapsack(produtos, capacidade):
         for coluna in range(capacidade + 1):
             if linha == 0 or coluna == 0:
                 tabelaKnapsack[linha][coluna] = 0
-            if pesoItem > coluna:
+            elif pesoItem > coluna:
                 tabelaKnapsack[linha][coluna] = tabelaKnapsack[linha-1][coluna]
             else:
                 # LEVAR / NAO LEVAR

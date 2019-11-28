@@ -31,6 +31,7 @@ def main():
                     print(coluna, end="\t")
                 print()
                 i += 1
+            print('Lista de itens levados: ', itensLevados)    
             input("Pressione qualquer tecla para retornar ao menu... ")
         else:
             os.system("clear")
