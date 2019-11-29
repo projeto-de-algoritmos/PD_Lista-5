@@ -10,8 +10,6 @@ def main():
         if opcao == 1:
             os.system("clear")
             produtos = cadastra_produtos(produtos)
-            print(produtos)
-            input()
         elif opcao == 2:
             os.system("clear")
             exibir_produtos_cadastrados(produtos)
@@ -31,7 +29,13 @@ def main():
                     print(coluna, end="\t")
                 print()
                 i += 1
-            print('Lista de itens levados: ', itensLevados)    
+            print("\n\n\033[0;32mLista de itens levados: \033[0m") 
+            for i in range(0, len(itensLevados)):
+                print("Nome do produto: ", itensLevados[i][0])
+                print("Quantidade: ", itensLevados[i][1])
+                print("Valor(R$): ", itensLevados[i][2])
+                print("Peso(g): ", itensLevados[i][3])
+                print("-------------------")
             input("Pressione qualquer tecla para retornar ao menu... ")
         else:
             os.system("clear")

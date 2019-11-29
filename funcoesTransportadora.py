@@ -70,7 +70,7 @@ def exibir_produtos_cadastrados(produtos):
         print("--------------------------")
 
 def coleta_capacidade_do_caminhao():
-    print("\033[0;32m O valor da capacidade deve ser um inteiro\033[0m")
+    print("\033[0;32mO valor da capacidade deve ser um inteiro\033[0m")
     capacidade = int(input("Capacidade do caminhão: "))
     capacidade = valida_capacidade(capacidade)
 
