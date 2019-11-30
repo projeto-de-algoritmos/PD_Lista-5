@@ -10,21 +10,29 @@
 | 16/0012961  |  Lucas Arthur Lermen |
 
 ## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
-
-## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+<p align="justify">Essa lista consiste de um menu que permite o cadastro de diversos produtos. Após o cadastro, pode ser realizado um envio de um caminhão com mercadorias para distribuição.
 
 ## Instalação 
-**Linguagem**: xxxxxx<br>
-**Framework**: (caso exista)<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
 
+**Linguagem**: Python v3.6 ou superior <br>
+
+### Executando o projeto
+
+#### Comandos para executar
+
+``` console
+$ python3 cinemania.py
+
+```
 ## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
+Ao executar o comando será inicializado um menu com 4 opções  
+1 - Cadastrar produtos que precisam ser entregues  
+2 - Ver produtos em estoque  
+3 - Exibir logística necessária para entregar a demanda  
+0 - Encerrar programa  
 
-## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
+
+Caso deseje cadastrar um prouto, selecione a opção 1. Ao selecionar a opção 2, lhe será apresentado uma lista com todos os produtos cadastrados. A opção 3 apresenta a tabela iterativa do knapsack com o maior valor possível de ser levada no caminhão na última célula da tabela. Além disso, também é apresentada a lista dos produtos levados nesse caminhão.
 
 
 
