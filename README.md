@@ -21,7 +21,7 @@
 #### Comandos para executar
 
 ``` console
-$ python3 cinemania.py
+$ python3 transportadora.py
 
 ```
 ## Uso 
